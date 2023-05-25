@@ -9,5 +9,5 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 let { data: Employees, error } = await supabase
   .from('Employees')
   .select('employee_name')
-
+ 
 </script>
