@@ -14,6 +14,6 @@ let { data: Store, error } = await supabase
 
 </script>
 
-<style scoped>
+<style>
 
 </style>
