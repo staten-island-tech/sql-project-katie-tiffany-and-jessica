@@ -11,7 +11,7 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #1B4332;
   transition: 0.4s;
 }
 
@@ -28,7 +28,7 @@ a,
   }
 
   #app {
-    display: grid;
+    display: table-row;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
