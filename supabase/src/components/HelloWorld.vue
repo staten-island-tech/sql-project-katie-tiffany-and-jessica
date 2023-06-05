@@ -12,6 +12,15 @@ defineProps({
     <h1 class="green">{{ msg }}</h1>
     <h3>Add items to your cart, then sign in to check out!</h3>
   </div>
+  <div class="home">
+    <Card
+      v-for="item in Items"
+      :key="item.Items"
+      :item="item.Items"
+      :price="item.Price"
+      :image="item.Image"
+    ></Card>
+  </div>
 </template>
 
 <style scoped>
