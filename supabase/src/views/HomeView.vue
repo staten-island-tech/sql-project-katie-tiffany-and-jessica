@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { ref, onMounted } from 'vue';
+import { supabase } from '../supabase'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+<h1>Login</h1>
+<h2>Email</h2>
+<input type="text" id="user">
+<h2>Password</h2>
+<input type="text" id="pw">
+<button>Enter</button>
 </template>
