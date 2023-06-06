@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div>
       <h2>Sign up for an account</h2>
       <form @submit.prevent="handleSignup">
@@ -45,4 +45,4 @@
       };
     },
   };
-  </script> -->
+  </script>

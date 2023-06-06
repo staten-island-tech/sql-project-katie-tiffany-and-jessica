@@ -6,3 +6,8 @@
   <input type="text" id="pw" />
   <button>Enter</button>
 </template>
+
+<script setup>
+import { ref, onMounted } from "vue";
+//import { supabase } from "../supabase";
+</script>
