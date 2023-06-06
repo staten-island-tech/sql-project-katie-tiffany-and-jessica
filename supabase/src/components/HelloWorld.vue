@@ -14,9 +14,9 @@ defineProps({
   </div>
   <div class="home">
     <Card
-      v-for="item in Items"
-      :key="item.Items"
-      :item="item.Items"
+      v-for="item in ITEMS"
+      :key="item.Item"
+      :item="item.Item"
       :price="item.Price"
       :image="item.Image"
     ></Card>
