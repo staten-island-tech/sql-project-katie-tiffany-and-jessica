@@ -28,9 +28,6 @@ export default {
     let { data: ITEMS, error } = await supabase.from("ITEMS").select("*");
 
     console.log(ITEMS);
-
-    let { data: Prices, error } = await supabase.from("Prices").select("*");
-    console.log(Prices);
   },
 };
 </script>
