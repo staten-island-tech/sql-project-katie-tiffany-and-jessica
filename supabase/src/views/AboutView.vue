@@ -12,7 +12,7 @@
 
 <div class="buttons">
 <button @click="login">Log in</button>
-<button @click="logOut">Log out</button>
+<button @click="logout">Log out</button>
 </div>
 
   <p>
@@ -24,18 +24,36 @@
 
 <script setup>
 import { ref } from "vue";
-//import { supabase } from "../supabase";
+import { supabase } from "../clients/supabase"
 
 let email=ref("");
 let password=ref("");
 
 //login
-function login () {
-console.log("log in")
+async function login() {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email.value,
+    password: password.value
+  })
+
+  if (error) {
+    console.log(error);
+  }
+  else {
+    console.log(data);
+  }
 }
 
 //logout
-function logOut () {
-  console.log("log out")
+async function logout () {
+  const { error } = await supabase.auth.signOut();
+
+  if (error) {
+    console.log(error);
+  }
+  else {
+    console.log("Successfully logged out");
+  }
 }
+
 </script>

@@ -19,11 +19,23 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router'
 import { ref } from "vue";
-let email=ref("");
-let password=ref("");
+import { supabase } from "../clients/supabase";
 
-function createAcc () {
-console.log("create account")
+let email = ref("");
+let password = ref("");
+
+async function createAcc() {
+  const { data, error } = await supabase.auth.signUp({
+    email: email.value,
+    password: password.value
+  })
+  if (error) {
+    console.log(error)
+  }
+  else {
+    console.log(data)   
+  }
 }
 </script>
