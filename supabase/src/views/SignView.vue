@@ -35,7 +35,8 @@ async function createAcc() {
     console.log(error)
   }
   else {
-    console.log(data)   
+    console.log(data) 
+    alert('Check email for confirmation.')  
   }
 }
 </script>
